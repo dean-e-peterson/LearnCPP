@@ -10,7 +10,7 @@ int main(int argc, char * [])
     // Get input.
     if (argc > 1)
     {
-        std::cerr << "Command line parameters not yet implemented." << std::endl;
+        std::cerr << "Command line parameters not yet implemented.\n";
         return 1;
     }
     else
