@@ -1,10 +1,10 @@
-#include <iostream>
+#include "io.h"
 
 int main()
 {
-	std::cout << "Please type a number: ";
-	int num{};
-	std::cin >> num;
-	std::cout << "You entered " << num << '\n';
+	int x{ readNumber() };
+	int y{ readNumber() };
+	int answer = x + y;
+	writeAnswer(answer);
 	return 0;
 }

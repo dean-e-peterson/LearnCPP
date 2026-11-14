@@ -145,7 +145,11 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Scratch.cpp" />
+    <ClCompile Include="io.cpp" />
+    <ClCompile Include="scratch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="io.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
