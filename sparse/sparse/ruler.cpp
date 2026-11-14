@@ -4,9 +4,9 @@
 
 // How it does it documentation.
 
-std::string_view rulersToString(std::vector<int> bitsList = std::vector<int>{ 5, 7 }) // Remove hardcoded default.
+std::string rulersToString(std::vector<int> bitsList = std::vector<int>{ 5, 7 }) // Remove hardcoded default.
 {
-	std::string result = std::string();
+	std::string result;
 	for (const int bits : bitsList)
 	{
 		result.append(rulerToString(bits));
@@ -15,8 +15,8 @@ std::string_view rulersToString(std::vector<int> bitsList = std::vector<int>{ 5,
 	return result;
 }
 
-std::string_view rulerToString(int)
+std::string rulerToString(int)
 {
-	constexpr std::string_view placeholder{ ".. .  ." };
+	const std::string placeholder{ ".. .  ." };
 	return placeholder;
 }

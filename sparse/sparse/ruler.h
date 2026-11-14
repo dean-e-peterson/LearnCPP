@@ -5,7 +5,7 @@
 
 // What it does and how to use it documenatation.
 
-std::string_view rulersToString(std::vector<int> bitsList);
-std::string_view rulerToString(int bits);
+std::string rulersToString(std::vector<int> bitsList);
+std::string rulerToString(int bits);
 
 #endif
