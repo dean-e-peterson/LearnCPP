@@ -22,10 +22,13 @@ int main(int argc, char * [])
     // Calculate rulers.
     std::cout << "Calculating complete sparse rulers of length "
               << length << " with " << ticks << " tick marks...\n";
+    // Initialize timing info.
     // getCompleteRulers(length, ticks);
+    // Record timing info.
 
     // Display rulers.
-    // std::cout << rulersToStrings();
+    std::cout << rulersToString({ 3, 6 });
+    // Display count and timing info.
 
     std::cout << "Done\n";
     return 0;
