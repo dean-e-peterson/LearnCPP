@@ -1,4 +1,4 @@
-#include "ruler.h"
+#include "SparseRuler.h"
 #include "utils.h"
 #include <iostream>
 

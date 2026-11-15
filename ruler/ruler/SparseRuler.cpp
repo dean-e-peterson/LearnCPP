@@ -1,4 +1,4 @@
-#include "ruler.h"
+#include "SparseRuler.h"
 #include <vector>
 #include <string>
 

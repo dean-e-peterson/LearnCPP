@@ -1,5 +1,5 @@
-#ifndef RULER_H
-#define RULER_H
+#ifndef SPARSE_RULER_H
+#define SPARSE_RULER_H
 #include <vector>
 #include <string>
 
