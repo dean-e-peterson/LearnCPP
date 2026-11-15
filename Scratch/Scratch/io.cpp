@@ -1,15 +1,22 @@
 #include "io.h"
 #include <iostream>
 
-int readNumber()
+double promptForHeight()
 {
-	std::cout << "Please enter an integer: ";
-	int num{};
-	std::cin >> num;
-	return num;
+	std::cout << "Enter the height of the tower in meters: ";
+	double height{};
+	std::cin >> height;
+	return height;
 }
 
-void writeAnswer(int answer)
+void displayBallHeight(int seconds, double height)
 {
-	std::cout << "Adding the two numbers gives " << answer << ".\n";
+	if (height > 0)
+	{
+		std::cout << "At " << seconds << " seconds, the ball is at height: " << height << " meters\n";
+	}
+	else
+	{
+		std::cout << "At " << seconds << " seconds, the ball is on the ground\n";
+	}
 }
