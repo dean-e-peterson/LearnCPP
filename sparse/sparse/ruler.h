@@ -5,7 +5,8 @@
 
 // What it does and how to use it documenatation.
 
-std::string rulersToString(std::vector<int> bitsList);
-std::string rulerToString(int bits);
+std::string rulersToString(std::vector<long long> bitsList);
+std::string rulerToString(long long bits);
+long long next(long long bits);
 
 #endif
