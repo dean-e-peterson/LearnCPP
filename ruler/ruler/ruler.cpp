@@ -23,11 +23,11 @@ int main(int argc, char * [])
     std::cout << "Calculating complete sparse rulers of length "
               << length << " with " << ticks << " tick marks...\n";
     // Initialize timing info.
-    // getCompleteRulers(length, ticks);
+    std::vector<long long> bitList = getCompleteRulers(length, ticks);
     // Record timing info.
 
     // Display rulers.
-    std::cout << rulersToString({ 3, 6 });
+    std::cout << rulersToString(bitList, length);
     // Display count and timing info.
 
     std::cout << "Done\n";
