@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="ruler/ruler.vcxproj" />
+  <Project Path="ruler/ruler.vcxproj" Id="c295d8e1-7348-4f68-aa07-2ed689ca4256" />
 </Solution>

@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
+#include <string_view>
 
-int promptForInt(/* add char* or string param later */);
+int promptForInt(std::string_view prompt);
 
 #endif

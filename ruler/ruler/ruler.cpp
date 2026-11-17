@@ -16,8 +16,8 @@ int main(int argc, char * [])
     }
     else
     {
-        length = promptForInt();
-        ticks = promptForInt();
+        length = promptForInt("Length of ruler to generate: ");
+        ticks = promptForInt("Number of tickmarks on ruler: ");
     }
 
     std::cout << "Calculating complete sparse rulers of length "

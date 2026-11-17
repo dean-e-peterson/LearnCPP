@@ -1,9 +1,10 @@
 #include "utils.h"
 #include <iostream>
+#include <string_view>
 
-int promptForInt(/* add char* or string param later */)
+int promptForInt(std::string_view prompt)
 {
-    std::cout << "Please enter an integer: ";
+    std::cout << prompt;
     int value{};
     std::cin >> value;
     return value;
