@@ -44,6 +44,15 @@ long long next(long long bits)
 	return left_bits | right_bits;
 }
 
+// Attach ones on both ends of a bit combo.
+long long attachEnds(long long bits, int length)
+{
+	long long result = 1LL; // Attach lower end.
+	result = result | (bits << 1); // Insert middle.
+	result = result | (1LL << length); // Attach high end.
+	return result;
+}
+
 bool isComplete(long long bits, int length)
 {
 	bool result = true;
@@ -58,16 +67,22 @@ bool isComplete(long long bits, int length)
 std::vector<long long> getCompleteRulers(int length, int ticks)
 {
 	auto result = std::vector<long long>();
-	const long long overflow = 1LL << (length + 1);
-	const long long firstCandidate = (1LL << ticks) - 1;
-	long long candidate = firstCandidate;
-	while (candidate < overflow)
+	constexpr int endTicks = 2;
+
+	// First combination of inner bits with the tick marks except the two ends.
+	long long innerCandidate = (1LL << (ticks - endTicks)) - 1;
+
+	const long long overflow = 1LL << (length + 1 - endTicks);
+	while (innerCandidate < overflow)
 	{
+		const long long candidate = attachEnds(innerCandidate, length);
 		if (isComplete(candidate, length))
 		{
 			result.push_back(candidate);
 		}
-		candidate = next(candidate);
+
+		// Get next combination of inner bits from Gosper's hack with next().
+		innerCandidate = next(innerCandidate);
 	}
 	return result;
 }
